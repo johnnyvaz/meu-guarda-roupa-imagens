@@ -30,7 +30,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
   return (
     <>
       <Head>
-        <title>Next.js Conf 2022 Photos</title>
+        <title>Gestão de Ativos de Mídia</title>
         <meta
           property="og:image"
           content="https://nextjsconf-pics.vercel.app/og-image.png"
@@ -57,21 +57,20 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               </span>
               <span className="absolute left-0 right-0 bottom-0 h-[400px] bg-gradient-to-b from-black/0 via-black to-black"></span>
             </div>
-            <Logo />
+            {/* <Logo /> */}
             <h1 className="mt-8 mb-4 text-base font-bold uppercase tracking-widest">
-              2022 Event Photos
+              Gestão de Ativos de Mídia Programável
             </h1>
             <p className="max-w-[40ch] text-white/75 sm:max-w-[32ch]">
-              Our incredible Next.js community got together in San Francisco for
-              our first ever in-person conference!
+              Imagens hospedadas em CDN da Cloudnary
             </p>
             <a
               className="pointer z-10 mt-6 rounded-lg border border-white bg-white px-3 py-2 text-sm font-semibold text-black transition hover:bg-white/10 hover:text-white md:mt-4"
-              href="https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-cloudinary&project-name=nextjs-image-gallery&repository-name=with-cloudinary&env=NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,CLOUDINARY_API_KEY,CLOUDINARY_API_SECRET,CLOUDINARY_FOLDER&envDescription=API%20Keys%20from%20Cloudinary%20needed%20to%20run%20this%20application"
+              href="https://meuguardaroupa.com.br"
               target="_blank"
               rel="noreferrer"
             >
-              Clone and Deploy
+              Visitar E-commerce
             </a>
           </div>
           {images.map(({ id, public_id, format, blurDataUrl }) => (
@@ -84,7 +83,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               className="after:content group relative mb-5 block w-full cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight"
             >
               <Image
-                alt="Next.js Conf photo"
+                alt="Gestão de ativos de media"
                 className="transform rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110"
                 style={{ transform: 'translate3d(0, 0, 0)' }}
                 placeholder="blur"
@@ -102,34 +101,15 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
         </div>
       </main>
       <footer className="p-6 text-center text-white/80 sm:p-12">
-        Thank you to{' '}
+        Desenvolvido por {' '}
         <a
-          href="https://edelsonphotography.com/"
+          href="https://johnnyvaz.com.br/"
           target="_blank"
           className="font-semibold hover:text-white"
           rel="noreferrer"
         >
-          Josh Edelson
-        </a>
-        ,{' '}
-        <a
-          href="https://www.newrevmedia.com/"
-          target="_blank"
-          className="font-semibold hover:text-white"
-          rel="noreferrer"
-        >
-          Jenny Morgan
-        </a>
-        , and{' '}
-        <a
-          href="https://www.garysextonphotography.com/"
-          target="_blank"
-          className="font-semibold hover:text-white"
-          rel="noreferrer"
-        >
-          Gary Sexton
-        </a>{' '}
-        for the pictures.
+          Johnny Vaz
+        </a>.
       </footer>
     </>
   )
